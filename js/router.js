@@ -2,8 +2,9 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'views/map'
-], function($, _, Backbone, MapView) {
+  'views/map',
+  'views/menu'
+], function($, _, Backbone, MapView, MenuView) {
   var AppRouter = Backbone.Router.extend({
     routes: {
       '': 'initialize'
@@ -12,6 +13,7 @@ define([
 
     'initialize': function(){
       var mapView = new MapView();
+      var menuView = new MenuView();
     }
   });
 
