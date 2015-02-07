@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "http-server": "^0.7.4",
+    "npm": "*",
     "bower": "*",
     "requirejs": "*"
   }
