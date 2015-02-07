@@ -6,12 +6,12 @@ define([
 ], function($, _, Backbone, MapView) {
   var AppRouter = Backbone.Router.extend({
     routes: {
-      '': 'initalize'
+      '': 'initialize'
     },
+    el: '#appView',
 
-    'initalize': function(){
+    'initialize': function(){
       var mapView = new MapView();
-      mapView.render();
     }
   });
 

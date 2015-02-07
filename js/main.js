@@ -5,6 +5,7 @@ requirejs.config({
     underscore: 'lib/underscore/underscore-min',
     backbone: 'lib/backbone/backbone',
     leaflet: 'lib/leaflet/dist/leaflet-src',
+    ol: 'lib/openlayers3/build/ol-debug',
     text: 'lib/requirejs-text/text',
     router: 'router',
     app: 'app'
@@ -19,6 +20,9 @@ requirejs.config({
     },
     'leaflet': {
       exports: 'L'
+    },
+    ol: {
+      exports: 'ol'
     }
   }
 })

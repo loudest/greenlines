@@ -2,29 +2,51 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'leaflet',
+  'ol',
   'text!templates/map/map.html'
-], function($, _, Backbone, L, MapTemplate){
+], function($, _, Backbone, ol, MapTemplate){
   var MapView = Backbone.View.extend({
-    el: $('#appView'),
-   
+    el: '#appView',
+    id: 'map',
+    redraw: false,
+    //interactions: ol.interaction.defaults(),
+
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.MapQuest({layer: 'osm'}),
+        name: 'basemap'
+      })
+    ],
+    center: ol.proj.transform([-122, 47], 'EPSG:4326', 'EPSG:3857'),
+    zoom: 13,
+    extent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34],   
+
     initialize: function(){
       this.on('render', this.afterRender);
       this.render();
     }, 
    
     render: function(){
+      this.map = new ol.Map({
+        interactions: this.interactions,
+        target: this.id,
+        layers: this.layers,
+        view: new ol.View({
+          center: this.center,
+          zoom: this.zoom,
+          zoomFactor: 1.25,
+          extent: this.extent
+        })
+      });
+      this.redraw = false;
       var compiled = _.template(MapTemplate);
       var template = compiled();
-      this.$el.append(template);
+      $('body').append(template);
     },
 
     afterRender: function() {      
-      var map = L.map('#map', {
-        center: [47.6097, -122.3331],
-        zoom: 13,
-      });
-      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(map);
+      var map = this.map;
+      this.$el.append(map);
     }
 
   });
