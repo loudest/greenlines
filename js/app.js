@@ -1,8 +1,16 @@
-var connect = require('connect');
+define([
+  'jquery',
+  'underscore',
+  'backbone',
+  'router',
+], function($, _, Backbone, Router){
+  var initialize = function(){
+    var router = new Router();
+    router.initialize();
+    Backbone.history.start();
+  }
 
-connect()
-  .use(connect.static('.'))
-  .listen(8080);
-
-console.log('Listening on port 8080.');
-
+  return {
+    initialize: initialize
+  };
+});
