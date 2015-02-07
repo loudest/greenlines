@@ -17,8 +17,8 @@ define([
         name: 'basemap'
       })
     ],
-    center: ol.proj.transform([-122, 47], 'EPSG:4326', 'EPSG:3857'),
-    zoom: 13,
+    center: ol.proj.transform([-122.3331, 47.6097], 'EPSG:4326', 'EPSG:3857'),
+    zoom: 35,
     extent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34],   
 
     initialize: function(){
