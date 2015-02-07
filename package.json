@@ -5,11 +5,15 @@
   "main": "index.js",
   "scripts": {
     "start": "node node_modules/http-server/bin/http-server",
+    "postinstall": "bower install",
+    "postupdate": "bower update",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alex Miranda",
   "license": "MIT",
   "dependencies": {
-    "http-server": "^0.7.4"
+    "http-server": "^0.7.4",
+    "bower": "*",
+    "requirejs": "*"
   }
 }
