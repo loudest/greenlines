@@ -11,7 +11,7 @@ Our app is live at [Heroku] (https://greenliners-client.herokuapp.com). You can 
 
 Our approach for satisfying this challenge was to:
 
-- Utilize the 50% affordability rate (wage versus cost of rent) of low-income workers based on research performed by Zillow, "The Rent is Too Damn High" (source: http://www.zillow.com/research/rent-affordability-2013q4-6681/). 
+- Utilize the 50% affordability rate (wage versus cost of rent) of low-income workers based on research performed by Zillow, "The Rent is Too Damn High", by Krishna Rao. (source: http://www.zillow.com/research/rent-affordability-2013q4-6681/). 
 - Show what areas in Seattle are considered affordable based on HUD and US Census GIS data
 - Determine what ranges of hourly wages based on a 40 standard hour week schedule, can an individual afford to live in Seattle.
 - Visualize it on a map and render it to be mobile compactable via app interface or mobile website 
