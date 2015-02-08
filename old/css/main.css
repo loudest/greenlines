@@ -1,0 +1,12 @@
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+.navbar {
+  background-color: #d3d3d3;
+}
+
+.slider {
+  margin-top: 20px;
+}

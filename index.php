@@ -1,0 +1,103 @@
+<?php
+$wage = $_GET['wage'];
+if(empty($wage)) {
+	$wage = 15;
+}
+?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GreenLines</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+      }
+	  #wage {
+		z-index: 150;
+		position: absolute;
+		top: 10px;
+		right: 50px;
+		height: 85px;	 
+		background-color: green;	
+		color: white;
+		font-size: 50pt;
+	  }
+	  #map-canvas {
+		z-index: 0;
+	  }
+	  #slider-box {
+		background-color: green;
+		z-index: 100;
+		position: absolute;
+		top: 120px;
+		right: 50px;
+		height: 75%;
+	  }	
+	  #slider {
+		background-color: green;
+		height: 100%;	  
+	  }
+	  #sliderDisplay {
+		background-color: green;
+	  }
+    </style>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">	
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>    
+<script>
+var map;
+function initialize() {
+	// Create a simple map.
+	map = new google.maps.Map(document.getElementById('map-canvas'), {
+		zoom: 14,
+		center: {lat: 47.6097, lng: -122.3331}
+	});
+
+	map.data.setStyle({
+		fillColor: 'green',
+		strokeWeight: 3
+	}); 
+  
+	// Load a GeoJSON from the same server as our demo.
+	map.data.loadGeoJson('https://greenliners-api.herokuapp.com?wage=<?php echo $wage; ?>');
+  
+	updateMap = function(map,value) {
+		map.data.forEach(function(feature) {
+			map.data.remove(feature); 	
+		});
+		map.data.loadGeoJson('https://greenliners-api.herokuapp.com?wage='+value);
+		display = value.toLocaleString(
+			   "en-US",
+			   {style:"currency",
+				currency:"USD",
+				minimumFractionDigits:2});
+		$('#wage').html('<center><strong>'+display+'</strong> /hr</center>');
+	}
+	$('#slider').slider(
+	  {max:20.00,
+	   min:8.50,
+	   orientation:"vertical",
+	   step: 0.1,
+	   value: 15,
+	   slide: function(event, ui){
+		 $("#sliderDisplay").text('')},
+			stop: function( event, ui ) { updateMap(map,ui.value)}  
+		})  
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+	<div id="wage"><strong>$15.00</strong> /hr</div>
+	<div id="slider-box"><div id="slider"></div></div>
+	<div id="map-canvas"></div>
+  </body>
+</html>
