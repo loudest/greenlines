@@ -6,6 +6,7 @@ requirejs.config({
     backbone: 'lib/backbone/backbone',
     bootstrap: 'lib/bootstrap/dist/js/bootstrap',
     ol: 'lib/openlayers3/build/ol-debug',
+    jqueryui: 'lib/jqueryui/ui',
     text: 'lib/requirejs-text/text',
     router: 'router',
     app: 'app'
@@ -16,6 +17,7 @@ requirejs.config({
       deps: ['underscore', 'jquery'],
       exports: 'Backbone'
     },
+    'jqueryui': ['jquery'],
     'underscore': {
       exports: '_'
     },

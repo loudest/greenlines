@@ -9,13 +9,17 @@
 
   <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li><a href="#">Start<span class="sr-only"></span></a></li>
+      <li><a href="#collapseMenu" data-toggle="collapse" >Start<span class="sr-only"></span></a></li>
     </ul>
   </div>
-  <div class="form-horizontal">  
-    <div class="form-group col-lg-6 hide">
+  <div class="form-horizontal collapse" id="collapseMenu">  
+    <div class="form-group col-lg-6">
       <label class="col-sm-6">Enter your income level:</label>
-      <input type="number" class="form-control col-sm-6" />
+      <input type="number" min="0" class="form-control col-lg-6" />
+    </div>
+    <div class="slider"></div>
+    <div class="form-group col-lg-6">
+      <a href="#" class="btn btn-primary submit">Submit</a>
     </div> 
   </div>
 </div>
