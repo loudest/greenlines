@@ -21,9 +21,11 @@ define([
     zoom: 35,
     extent: [-20037508.34, -20037508.34, 20037508.34, 20037508.34],   
 
-    initialize: function(){
+    initialize: function(model){
+      this.model = model;
       this.on('render', this.afterRender);
       this.render();
+      this.model.on('change:geoJSON', this.rerenderMap);
     }, 
    
     render: function(){
@@ -47,6 +49,17 @@ define([
     afterRender: function() {      
       var map = this.map;
       this.$el.append(map);
+    },
+
+    rerenderMap: function(){
+      var data = this.model.get('geoJson');
+      console.log(data);
+      var vectorSource = new ol.source.GeoJSON(data);
+      var vectorLayer = new ol.layer.Vector({
+        source: vectorSource
+      });
+      this.map.addLayer(vectorLayer);
+      this.afterRender();
     }
 
   });

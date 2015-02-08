@@ -6,11 +6,10 @@ define([
 ], function($, _, Backbone, Router){
   var initialize = function(){
     var router = new Router();
-    router.initialize();
     Backbone.history.start();
+    router.navigate("", {trigger: true});
   }
-
   return {
     initialize: initialize
-  };
+  }
 });
