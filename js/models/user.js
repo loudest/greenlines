@@ -10,7 +10,7 @@ define([
   var userModel = Backbone.Model.extend({
     urlRoot : URLROOT,
     url : function () {
-      return this.urlRoot + "?"+this.income
+      return this.urlRoot + "/?wage="+this.income
     }
     defaults: {
       income:15,
@@ -22,11 +22,10 @@ define([
     initialize: function(){
       this.on("change:income",function(user){
          user.fetch({
-         success: function (model, geoJSON) {
-            var layer = new ol.layer.Vector({
-               source: new ol.source.GeoJSON(x)
-    })})}})})}
-    })
+            success: function (model, geoJSON) {
+            // ol api calls go here
+         }})})}})
+ 
   
             
     
