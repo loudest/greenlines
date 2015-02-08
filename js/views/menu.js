@@ -35,6 +35,7 @@ define([
         var wage = this.model.get('income');
         $.get('https://greenliners-api.herokuapp.com/?wage=' + wage, _.bind(function(data){
           this.model.set({'geoJson': data});
+          console.log(this.model.get('geoJson'));
         }, this));
       } else {
         alert("Enter a number for the wage field!");

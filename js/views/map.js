@@ -25,7 +25,7 @@ define([
       this.model = model;
       this.on('render', this.afterRender);
       this.render();
-      this.model.on('change:geoJSON', this.rerenderMap);
+      this.model.on('change:geoJson', this.rerenderMap);
     }, 
    
     render: function(){
