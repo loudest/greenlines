@@ -3,21 +3,38 @@ define([
   'underscore',
   'backbone',
   'text!templates/menu/menu.html',
+  'models/user',
   'bootstrap',
   'jqueryui/slider'
-], function($, _, Backbone, MenuTemplate){
+], function($, _, Backbone, MenuTemplate, UserModel){
   var menuView = Backbone.View.extend({
     events: {
-      'click .start': 'initWizard'
+      'keyup input': 'update',
+      'click .submit': 'fetchGeoData'
     },
 
     tagName: 'nav',
     className: 'navbar navbar-default',
   
     initialize: function(){
+      var userModel = new UserModel();
+      this.model = userModel;
       this.on('render', this.sliderInit);
       this.render();
     },
+
+    update: function(){
+      var income = this.$('input').val();
+      this.model.set('income', income);
+    },
+
+    fetchGeoData: function(){
+      this.model.fetch({
+        success: _.bind(function(model){
+          
+          }, this)
+        }
+    }
 
     render: function(){
       var compiled = _.template(MenuTemplate);
