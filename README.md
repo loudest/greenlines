@@ -3,7 +3,7 @@ GreenLines
 One of the biggest problems for people making a specific wage in Seattle, is knowing where affordable places where to live.  Rather than drawing redlines to show where the areas in Seattle are considered poverty level.  We decided to make these same area and draw them green.  We then added the feature to show based on hourly income and HUD rent data, the areas in Seattle that are considered affordable for rent.  
 
 ![Our Mascot] (imgs/logo.png)
-![Screenshot](imgs/screenshot.jpg)
+![Screenshot](imgs/screenshot.png)
 
 Our app is live at [Heroku] (https://greenlines.herokuapp.com/). You can select and adjust your hourly wage (in dollars) to determine affordable housing districts in Seattle.
 
@@ -40,4 +40,4 @@ In order to build and run our app:
 1. [Deploying server-side code] backend/ are Python server side Flask to filter the wage filter for Seattle rent data.
 2. [Running client-side code] / will have backbone.js and node.js 
 
-Our code is licensed under the [MIT License](LICENSE.md). Pull requests will be accepted to this repo, pending review and approval.
+Our code is licensed under the [MIT License](license.md). Pull requests will be accepted to this repo, pending review and approval.
