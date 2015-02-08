@@ -10,7 +10,7 @@ $(document).ready(function(){
        //orientation:"vertical",
        step: 0.1,
        value: 15,
-       change: function(event, ui){
+       slide: function(event, ui){
          $("#sliderDisplay").text(
             ui.value.toLocaleString(
                "en-US",
