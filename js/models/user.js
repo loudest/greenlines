@@ -3,28 +3,17 @@ define([
   'underscore',
   'backbone'
 ], function($, _, Backbone){
-  var URLROOT = "https://greenliners-api.herokuapp.com" // ?
   var userModel = Backbone.Model.extend({
-    urlRoot : URLROOT,
-    url : function () {
-      return this.urlRoot + "/?wage=" + this.income
-    }
+    urlRoot : function(){
+      return "https://greenliners-api.herokuapp.com/?wage=" + this.get('income');
+    },
+
     defaults: {
-      income: 15,
+      income: '15',
       incomeUnits: 'hourly',
       address: '',
       dependants: 0,
       geoJson: []
-    },
-
-    initialize: function(){
-      this.on("change:income",function(user){
-         user.fetch({
-            success: function (model, geoJSON) {
-            // ol api calls go here
-         }
-         })
-      })
     },
 
     convertToHourly: function(amt){

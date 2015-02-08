@@ -5,7 +5,7 @@ requirejs.config({
     underscore: 'lib/underscore/underscore-min',
     backbone: 'lib/backbone/backbone',
     bootstrap: 'lib/bootstrap/dist/js/bootstrap',
-    ol: 'lib/openlayers3/build/ol-debug',
+    ol: 'lib/openlayers3/build/ol',
     jqueryui: 'lib/jqueryui/ui',
     text: 'lib/requirejs-text/text',
     router: 'router',

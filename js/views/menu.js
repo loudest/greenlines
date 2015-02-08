@@ -9,8 +9,9 @@ define([
 ], function($, _, Backbone, MenuTemplate, UserModel){
   var menuView = Backbone.View.extend({
     events: {
+      'click .submit': 'fetchGeoData',
       'keyup input': 'update',
-      'click .submit': 'fetchGeoData'
+      'change input': 'update'
     },
 
     tagName: 'nav',
@@ -26,15 +27,17 @@ define([
     update: function(){
       var income = this.$('input').val();
       this.model.set('income', income);
+      console.log(income);
     },
 
-    fetchGeoData: function(){
-      this.model.fetch({
-        success: _.bind(function(model){
-          
-          }, this)
+    fetchGeoData: function(e){
+      e.preventDefault();
+      this.model.save({
+        success: function(model){
+          console.log(model);
         }
-    }
+      });
+    },
 
     render: function(){
       var compiled = _.template(MenuTemplate);
