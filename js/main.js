@@ -4,13 +4,14 @@ requirejs.config({
     jquery: 'lib/jquery/dist/jquery.min',
     underscore: 'lib/underscore/underscore-min',
     backbone: 'lib/backbone/backbone',
-    leaflet: 'lib/leaflet/dist/leaflet-src',
+    bootstrap: 'lib/bootstrap/dist/js/bootstrap',
     ol: 'lib/openlayers3/build/ol-debug',
     text: 'lib/requirejs-text/text',
     router: 'router',
     app: 'app'
   },
   shim: {
+    'bootstrap': ['jquery'],
     'backbone': {
       deps: ['underscore', 'jquery'],
       exports: 'Backbone'

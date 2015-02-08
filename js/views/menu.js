@@ -2,7 +2,8 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!templates/menu/menu.html'
+  'text!templates/menu/menu.html',
+  'bootstrap'
 ], function($, _, Backbone, MenuTemplate){
   var menuView = Backbone.View.extend({
     events: {

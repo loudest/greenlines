@@ -13,8 +13,9 @@ define([
     el: '#appView',
     
     'initialize': function(){
-      this.views.push(new MapView());
+     // this.views.push(new MapView());
       this.views.push(new MenuView());
+      this.views.push(new MapView());
     }
   });
 
