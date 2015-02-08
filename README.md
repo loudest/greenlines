@@ -23,8 +23,8 @@ Once we did that, we plan to work with Code for America (Seattle) to further dev
 Our team is comprised of:
 
 - [@loudest] (https://github.com/loudest) - README.md writer, man who speaks softly and carries a big $15 sign. 
-- [@amiranda222] (https://github.com/amiranda222) - Alexander the Great, The Naster of All Things Digital
-- [@dcbaron](http://github.com/dcbaron) - 9'o clock shadow, Number crunching caffeine junkie
+- [@amiranda222] (https://github.com/amiranda222) - Alexander the Great, The Master of All Things Digital
+- [@dcbaron](http://github.com/dcbaron) - Has a 9 ol'clock shadow, Number crunching caffeine junkie
 
 ## Technologies, APIs, and Datasets Utilized
 
