@@ -17,9 +17,8 @@ define([
     tagName: 'nav',
     className: 'navbar navbar-default',
   
-    initialize: function(){
-      var userModel = new UserModel();
-      this.model = userModel;
+    initialize: function(model){
+      this.model = model;
       this.on('render', this.sliderInit);
       this.render();
     },
@@ -33,11 +32,11 @@ define([
       e.preventDefault();
       var income = parseFloat(this.model.get('income'));
       if (_.isNumber(income)){
-        this.model.save({
-          success: function(model){
-            console.log(model);
-          }
-        });
+        var wage = this.model.get('income');
+        $.get('https://greenliners-api.herokuapp.com/?wage=' + wage, _.bind(function(data){
+          this.model.set({'geoJson': data});
+          console.log(this.model.get('geoJson'));
+        }, this));
       } else {
         alert("Enter a number for the wage field!");
       }

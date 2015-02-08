@@ -3,19 +3,17 @@ define([
   'underscore',
   'backbone',
   'views/map',
-  'views/menu'
-], function($, _, Backbone, MapView, MenuView) {
+  'views/menu',
+  'models/user'
+], function($, _, Backbone, MapView, MenuView, UserModel) {
   var AppRouter = Backbone.Router.extend({
     views: [],
-    routes: {
-      '': 'initialize'
-    },
     el: '#appView',
-    
-    'initialize': function(){
-     // this.views.push(new MapView());
-      this.views.push(new MenuView());
-      this.views.push(new MapView());
+    routes: {'': 'initialize'},        
+    initialize: function(){
+      var model = new UserModel();
+      this.views.push(new MenuView(model));
+      this.views.push(new MapView(model));
     }
   });
 
