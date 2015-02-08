@@ -30,7 +30,7 @@ Our team is comprised of:
 
 We made use of:
 - [Heroku](https://www.heroku.com/)
-- Python [Flask] (http://flask.pocoo.org/) for filtering GIS data and JavaScript [Backbone.js] (http://backbonejs.org/) and [OpenLayers 3] (http://openlayers.org/) for client-side JavaScript mapping.
+- Python [Flask] (http://flask.pocoo.org/) for filtering GIS data and JavaScript [gmap.js] (https://developers.google.com/maps/documentation/javascript/events) for client-side JavaScript mapping.
 - [HUD Location Affordability Index] (http://zillowhack.hud.opendata.arcgis.com/datasets/27b53ea69f98474eb002ac3b9c6b51eb_0) GIS data for rent and GIS data
 
 ## Contributing
