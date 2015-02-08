@@ -13,7 +13,7 @@ define([
       'keyup input': 'update',
       'change input': 'update'
     },
-
+    el: 'body',
     tagName: 'nav',
     className: 'navbar navbar-default',
   
@@ -24,19 +24,23 @@ define([
       this.render();
     },
 
-    update: function(){
+    update: function(e){
       var income = this.$('input').val();
-      this.model.set('income', income);
-      console.log(income);
+      this.model.set({'income': income});
     },
 
     fetchGeoData: function(e){
       e.preventDefault();
-      this.model.save({
-        success: function(model){
-          console.log(model);
-        }
-      });
+      var income = parseFloat(this.model.get('income'));
+      if (_.isNumber(income)){
+        this.model.save({
+          success: function(model){
+            console.log(model);
+          }
+        });
+      } else {
+        alert("Enter a number for the wage field!");
+      }
     },
 
     render: function(){
@@ -63,6 +67,8 @@ define([
               }
             )
           )
+          this.$('input').val(ui.value);
+          this.update();
       }, this),
       stop: _.bind(function(e, ui) {
         this.model.set('wage', ui.value);
