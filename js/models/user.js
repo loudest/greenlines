@@ -8,7 +8,8 @@ define([
       income: 0,
       incomeUnits: 'hourly',
       address: '',
-      dependants: 0
+      dependants: 0,
+      geoJson: []
     }
   })
   return userModel;
