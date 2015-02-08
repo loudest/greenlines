@@ -7,8 +7,8 @@
     "node": "0.10.x"
   },
   "scripts": {
-    "start": "node node_modules/http-server/bin/http-server",
-    "postinstall": "bower install",
+    "start": "npm install && node node_modules/http-server/bin/http-server",
+    "postinstall": "./node_modules/bower/bin/bower install",
     "postupdate": "bower update",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
