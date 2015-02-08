@@ -1,11 +1,11 @@
-# Zillow Hack Housing: GreenLiners
+GreenLiners
 
 One of the biggest problems for people making a specific wage in Seattle, is knowing where affordable places where to live.  Rather than drawing redlines to show where the areas in King County are considered poverty level.  We decided to make these same area and draw them green.  We then added the feature to show based on hourly income and HUD rent data, the areas in Seattle that are considered affordable for rent.  
 
 ![Our Mascot] (imgs/logo.png)
 ![Screenshot](imgs/screenshot.jpg)
 
-Our app is live at [GreenLiners] (https://greenliners-client.herokuapp.com). You can select and adjust your hourly wage (in dollars) to determine affordable housing districts in King County, Washington.
+Our app is live at [Heroku] (https://greenliners-client.herokuapp.com). You can select and adjust your hourly wage (in dollars) to determine affordable housing districts in King County, Washington.
 
 ## Challenge and Approach
 
@@ -22,9 +22,9 @@ Once we did that, we plan to work with Code for America (Seattle) to further dev
 
 Our team is comprised of:
 
-- [@loudest] (https://github.com/loudest) - README.md writer who speaks softly and carries a big $15 sign 
-- [@amiranda222] (https://github.com/amiranda222) - Alexander the Great, the master of all things digital
-- [@dcbaron](http://github.com/dcbaron) - 9'o clock shadow number crunching junkie
+- [@loudest] (https://github.com/loudest) - README.md writer, man who speaks softly and carries a big $15 sign. 
+- [@amiranda222] (https://github.com/amiranda222) - Alexander the Great, The Naster of All Things Digital
+- [@dcbaron](http://github.com/dcbaron) - 9'o clock shadow, Number crunching caffeine junkie
 
 ## Technologies, APIs, and Datasets Utilized
 
