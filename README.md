@@ -4,7 +4,7 @@ One of the biggest problems for people making a specific wage in Seattle, is kno
 
 ![Screenshot](imgs/screenshot.png)
 
-Our app is live at [Heroku] (https://greenlines.herokuapp.com/). You can select and adjust your hourly wage (in dollars) to determine affordable housing districts in Seattle.
+Our app is live at [Heroku] (http://codeforseattle.org/greenlines/). You can select and adjust your hourly wage (in dollars) to determine affordable housing districts in Seattle.
 
 ## Challenge and Approach
 
