@@ -2,7 +2,6 @@ GreenLines
 
 One of the biggest problems for people making a specific wage in Seattle, is knowing where affordable places where to live.  Rather than drawing redlines to show where the areas in Seattle are considered poverty level.  We decided to make these same area and draw them green.  We then added the feature to show based on hourly income and HUD rent data, the areas in Seattle that are considered affordable for rent.  
 
-![Our Mascot] (imgs/logo.png)
 ![Screenshot](imgs/screenshot.png)
 
 Our app is live at [Heroku] (https://greenlines.herokuapp.com/). You can select and adjust your hourly wage (in dollars) to determine affordable housing districts in Seattle.
