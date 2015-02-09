@@ -36,4 +36,4 @@ In order to build and run our app:
 1. [Deploying server-side code] backend/ are Python server side Flask to filter the wage filter for Seattle rent data.
 2. [Running client-side code] / run it via HTML site 
 
-Our code is licensed under the [MIT License](license.md). Pull requests will be accepted to this repo, pending review and approval.
+Our code is licensed under the [MIT License](LICENSE.md). Pull requests will be accepted to this repo, pending review and approval.
