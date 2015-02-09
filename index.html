@@ -1,9 +1,4 @@
 <?php
-$wage = $_GET['wage'];
-if(empty($wage)) {
-	$wage = 15;
-}
-?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -65,7 +60,7 @@ function initialize() {
 	}); 
   
 	// Load a GeoJSON from the same server as our demo.
-	map.data.loadGeoJson('https://greenliners-api.herokuapp.com?wage=<?php echo $wage; ?>');
+	map.data.loadGeoJson('https://greenliners-api.herokuapp.com?wage=15');
   
 	updateMap = function(map,value) {
 		map.data.forEach(function(feature) {
