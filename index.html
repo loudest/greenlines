@@ -60,13 +60,13 @@ function initialize() {
 	}); 
   
 	// Load a GeoJSON from the same server as our demo.
-	map.data.loadGeoJson('https://greenliners-api.herokuapp.com?wage=15');
+	map.data.loadGeoJson('https://greenlines.herokuapp.com?wage=15');
   
 	updateMap = function(map,value) {
 		map.data.forEach(function(feature) {
 			map.data.remove(feature); 	
 		});
-		map.data.loadGeoJson('https://greenliners-api.herokuapp.com?wage='+value);
+		map.data.loadGeoJson('https://greenlines.herokuapp.com?wage='+value);
 		display = value.toLocaleString(
 			   "en-US",
 			   {style:"currency",
