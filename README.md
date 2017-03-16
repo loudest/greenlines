@@ -14,7 +14,7 @@ Our approach for satisfying this data science challenge was to:
 - Show what areas in Seattle are considered affordable based on HUD and US Census GIS data
 - Determine what ranges of hourly wages based on a 40 standard hour week schedule, can an individual afford to live in Seattle.
 - Visualize it on a map and render it to be mobile compactable via app interface or mobile website 
-- Create a Flask microserve the parses GeoJSON data that can then be applied over a timescale for S-curve analysis (Machine Learning).
+- Create a Flask microservice the parses GeoJSON data that can then be applied over a timescale for S-curve analysis (Machine Learning).
 
 ## Team Members
 
