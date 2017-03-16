@@ -18,7 +18,7 @@ Our approach for satisfying this data science challenge was to:
 
 ## Team Members
 
-![Team](imgs/team.png)
+![Team](imgs/team.jpg)
 
 Our team with the CTO of Zillow, David Beitel, is comprised of:
 
