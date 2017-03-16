@@ -1,23 +1,26 @@
 ## GreenLines
 
-One of the biggest problems for people making a specific wage in Seattle, is knowing where affordable places where to live.  Rather than drawing redlines to show where the areas in Seattle are considered poverty level.  We decided to make these same area and draw them green.  We then added the feature to show based on hourly income and HUD rent data, the areas in Seattle that are considered affordable for rent.  
+One of the biggest problems for people making a specific wage in Seattle, is knowing where affordable places where to live.  Rather than drawing redlines to show where the areas in Seattle are considered poverty level.  We decided to make these same area and draw them green.  We then added the feature to show based on hourly income and HUD rent data, the areas in Seattle that are considered affordable for rent in 2015.
 
 ![Screenshot](imgs/screenshot.png)
 
-Our app is live at [GitHub](http://codeforseattle.org/greenlines/). You can select and adjust your hourly wage (in dollars) to determine affordable housing districts in Seattle.
+Our app is live at [GitHub](http://openseattle.org/greenlines/). You can select and adjust your hourly wage (in dollars) to determine affordable housing districts in Seattle.
 
 ## Challenge and Approach
 
-Our approach for satisfying this challenge was to:
+Our approach for satisfying this data science challenge was to:
 
 - Utilize the 50% affordability rate (wage versus cost of rent) of low-income workers based on research performed by Zillow, [The Rent is Too Damn High](http://www.zillow.com/research/rent-affordability-2013q4-6681/). 
 - Show what areas in Seattle are considered affordable based on HUD and US Census GIS data
 - Determine what ranges of hourly wages based on a 40 standard hour week schedule, can an individual afford to live in Seattle.
 - Visualize it on a map and render it to be mobile compactable via app interface or mobile website 
+- Create a Flask microserve the parses GeoJSON data that can then be applied over a timescale for S-curve analysis (Machine Learning).
 
 ## Team Members
 
-Our team is comprised of:
+![Team](imgs/team.png)
+
+Our team with the CTO of Zillow, David Beitel, is comprised of:
 
 - [@loudest](https://github.com/loudest) - README.md writer, man who speaks softly and carries a big $15 sign. 
 - [@amiranda222](https://github.com/amiranda222) - Alexander the Great, The Master of All Things Digital
