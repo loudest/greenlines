@@ -30,8 +30,8 @@ We made use of:
 - [Flask](http://flask.pocoo.org/) for filtering GIS data and JavaScript [gmap.js] (https://developers.google.com/maps/documentation/javascript/events) for client-side JavaScript mapping.
 - [HUD Location Affordability Index](http://zillowhack.hud.opendata.arcgis.com/datasets/27b53ea69f98474eb002ac3b9c6b51eb_0) GIS data for rent and GIS data
 
-## Microservice REST API explained
-Flask service listens to the following REST endpoints:
+## Microservice API explained
+Flask service listens to the following service-oriented architecture endpoint:
 1. /wage - GET paramater of int returns GeoJSON structured data
 
 ## Contributing
