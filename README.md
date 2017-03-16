@@ -20,7 +20,7 @@ Our approach for satisfying this data science challenge was to:
 
 ![Team](imgs/team.jpg)
 
-Our team with the CTO of Zillow, David Beitel, is comprised of:
+Our team (excluding) the CTO of Zillow, David Beitel, is comprised of:
 
 - [@loudest](https://github.com/loudest) - README.md writer, man who speaks softly and carries a big $15 sign. 
 - [@amiranda222](https://github.com/amiranda222) - Alexander the Great, The Master of All Things Digital
