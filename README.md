@@ -33,7 +33,7 @@ We made use of:
 
 ## Microservice API explained
 Flask service listens to the following service-oriented architecture endpoint:
-1. /?wage= - GET paramater of int returns GeoJSON structured data
+1. /?wage=<int> - GET paramater of int returns GeoJSON structured data
 
 ## Contributing
 In order to build and run our app:
